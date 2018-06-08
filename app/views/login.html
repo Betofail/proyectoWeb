@@ -1,0 +1,16 @@
+    <div class="container">
+
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Aula Virtual</h2>
+        <label for="inputEmail" class="sr-only">Nombre usuario</label>
+        <input type="email" id="inputEmail" class="form-control" ng-model="usuario.username" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Contraseña</label>
+        <input type="password" id="inputPassword" class="form-control" ng-model="usuario.pass" placeholder="Password" required>
+        <div class="checkbox">
+          <label>
+            <input type="radio" value="alumno" ng-model="usuario.tipo"> Alumno
+            <input type="radio" value="profesor" ng-model="usuario.tipo"> Profesor
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="crearUsuario()">Sign in</button>
+      </form>
