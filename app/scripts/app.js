@@ -20,6 +20,7 @@ angular
     'ngTouch'
   ])
   .config(function ($routeProvider,$locationProvider) {
+
     $routeProvider
       .when('/home', {
         templateUrl: 'views/main.html',
@@ -36,8 +37,15 @@ angular
         controller: 'LoginCtrl',
         controllerAs: 'login'
       })
+      .when('/registro', {
+        templateUrl: 'views/registro.html',
+        controller: 'RegistroCtrl',
+        controllerAs: 'registro'
+      })
       .otherwise({
         redirectTo: '/'
       });
       $locationProvider.html5Mode(true);
+      //$locationProvider.hashPrefix('');
+
   });

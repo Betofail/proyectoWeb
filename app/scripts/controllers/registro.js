@@ -2,16 +2,18 @@
 
 /**
  * @ngdoc function
- * @name aulaVirtualApp.controller:RegisterCtrl
+ * @name aulaVirtualApp.controller:RegistroCtrl
  * @description
- * # RegisterCtrl
+ * # RegistroCtrl
  * Controller of the aulaVirtualApp
  */
 angular.module('aulaVirtualApp')
-  .controller('RegisterCtrl', function () {
+  .controller('RegistroCtrl', function ($http) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+
+
   });
