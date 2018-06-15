@@ -8,7 +8,7 @@
  * Controller of the aulaVirtualApp
  */
 angular.module('aulaVirtualApp')
-  .controller('RegistroCtrl', function ($http) {
+  .controller('RegistroCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

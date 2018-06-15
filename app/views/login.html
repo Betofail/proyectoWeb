@@ -12,6 +12,10 @@
             <input type="radio" value="profesor" ng-model="usuario.tipo"> Profesor
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="crearUsuario()">Sign in</button>
-        <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="redirect()">Register</button>
+        <div ng-controller=LoginCtrl>
+          <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="crearUsuario()">Sign in</button>
+        </div>
+        <div ng-controller=RegisterCtrl>
+          <button class="btn btn-lg btn-primary btn-block" type="button" ng-click="redirect()">Register</button>
+        </div>
       </form>

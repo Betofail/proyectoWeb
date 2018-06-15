@@ -8,7 +8,7 @@
  * Controller of the aulaVirtualApp
  */
 angular.module('aulaVirtualApp')
-  .controller('LoginCtrl', function ($scope,usuario, $window, $http) {
+  .controller('LoginCtrl', function ($scope,usuario, $window) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -17,10 +17,7 @@ angular.module('aulaVirtualApp')
 
 
     $scope.redirect = function(){
-      return $http({
-        method 'GET',
-        url: 'http:localhost:3000/registro'
-      })
+      $window.location.href = '#/registro';
 
 
     }
