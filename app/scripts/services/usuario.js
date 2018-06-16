@@ -14,7 +14,7 @@ angular.module('aulaVirtualApp')
     	agregarUsuario: function(usuario){
     		return $http({
     			method: 'POST',
-    			url: 'http://localhost:3000/login',
+    			url: 'http://localhost:3000/signup',
     			data : usuario
     		});
     	}

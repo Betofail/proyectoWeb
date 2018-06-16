@@ -1,0 +1,38 @@
+    <div class="container">
+      <form class="form-signin">
+        <h2 class="form-signup-heading">Registrarse</h2>
+        <div class="input-group">
+          <span class="input-group-addon" id="Prnombre">Primer nombre</span>
+          <input type="text" class="form-control" ng-model="usuario.name" placeholder="Nombre" required>
+        </div>
+        <div><hr></div>
+        <div class="input-group">
+          <span class="input-group-addon" id="Apellido">Apellido</span>
+          <input type="text" class="form-control" ng-model="usuario.lastname" placeholder="Apellido" required>
+        </div>
+        <div><hr></div>
+        <div class="input-group">
+          <span class="input-group-addon" id="RUT">Rut</span>
+          <input type="text" class="form-control" ng-model="usuario.RUT" placeholder="RUT" required>
+        </div>
+        <div><hr></div>
+        <div class="input-group">
+          <span class="input-group-addon" id="email">E-mail</span>
+          <input type="email" id="inputEmail" class="form-control" ng-model="usuario.username" placeholder="Direccion de correo" required>
+        </div>
+        <div><hr></div>
+        <div class="input-group">
+          <span class="input-group-addon" id="pasword">Contraseña</span>
+          <input type="password" id="inputPassword" class="form-control" ng-model="usuario.pass" placeholder="Password" required>
+        </div>
+        <div class="checkbox" required>
+          <label>
+            <input type="radio" value="alumno" ng-model="usuario.tipo"> Alumno
+
+          </label>
+          <label>
+            <input type="radio" value="profesor" ng-model="usuario.tipo"> Profesor
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="crearUsuario()">Sign up</button>
+      </form>
