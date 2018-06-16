@@ -31,5 +31,9 @@
   },
   "engines": {
     "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "connect-modrewrite": "^0.10.2",
+    "http-rewrite-middleware": "^0.1.6"
   }
 }
