@@ -1,16 +1,18 @@
-    <div class="container">
-
-      <form class="form-signin">
-        <h2 class="form-signin-heading">Aula Virtual</h2>
-        <label for="inputEmail" class="sr-only">Nombre usuario</label>
-        <input type="email" id="inputEmail" class="form-control" ng-model="usuario.username" placeholder="Email address" required autofocus>
-        <label for="inputPassword" class="sr-only">Contraseña</label>
-        <input type="password" id="inputPassword" class="form-control" ng-model="usuario.pass" placeholder="Password" required>
-        <div class="checkbox">
-          <label>
-            <input type="radio" value="alumno" ng-model="usuario.tipo"> Alumno
-            <input type="radio" value="profesor" ng-model="usuario.tipo"> Profesor
-          </label>
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="">Sign in</button>
-      </form>
+    <div class="container-fluid ">
+      <h2>Login</h2>
+          <form name="form" ng-submit="usuario.login()" role="form">
+              <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+                  <label for="username">Username</label>
+                  <input type="text" name="username" id="username" class="form-control" ng-model="usuario.username" required />
+                  <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>
+              </div>
+              <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+                  <label for="password">Password</label>
+                  <input type="password" name="password" id="password" class="form-control" ng-model="usuario.password" required />
+                  <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+              </div>
+              <div class="form-actions">
+                  <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary">Login</button>
+                  <a href="/signup" class="btn btn-link">Register</a>
+              </div>
+          </form>
