@@ -8,7 +8,7 @@
  * Controller of the aulaVirtualApp
  */
 angular.module('aulaVirtualApp')
-  .controller('SignupCtrl', function ($scope,usuario) {
+  .controller('SignupCtrl', function ($scope,$location,usuario) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -22,6 +22,7 @@ angular.module('aulaVirtualApp')
 
       .then(function(respuesta) {
         console.log(respuesta)
+        $location.path("/")
       },
 
       function(error) { // optional

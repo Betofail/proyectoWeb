@@ -17,6 +17,13 @@ angular.module('aulaVirtualApp')
     			url: 'http://localhost:3000/signup',
     			data : usuario
     		});
-    	}
+    	},
+        loginUsuario: function(usuario) {
+            return $http({
+                method: 'POST',
+                url: 'http://localhost:3000/login',
+                data: usuario
+            });
+        }
     }
   });
