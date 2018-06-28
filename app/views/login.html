@@ -1,18 +1,24 @@
-    <div class="container-fluid ">
-      <h2>Inicio de Sesion</h2>
+  <div class="container-fluid ">
+      <h1 style="text-align:center"> Sistema de Aulas</h1>
+      <h2 style="text-align:center">Inicio de Sesión</h2>
+  <bgcolor style:"background-color:red">
+
           <form name="form" role="form">
               <div class="form-group">
-                  <label for="username">Username</label>
+
+                  <label for="username">Nombre de Usuario</label>
                   <input type="text" name="username" id="username" class="form-control" ng-model="usuario.username" required />
 
               </div>
               <div class="form-group">
-                  <label for="password">Password</label>
+                  <label for="password">Contraseña</label>
                   <input type="password" name="password" id="password" class="form-control" ng-model="usuario.password" required />
 
               </div>
               <div class="form-actions">
-                  <button type="submit" ng-click="loginUsuario()" class="btn btn-primary">Login</button>
-                  <a href="/signup" class="btn btn-link">Register</a>
+                  <button style="t" type="submit" ng-click="loginUsuario()" class="btn btn-primary">Conectar</button>
+                  <p> no posee una cuenta?
+                  <a href="/signup" class="btn btn-link">Registrarse</a>
+                  </p>
               </div>
           </form>
