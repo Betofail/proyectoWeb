@@ -8,7 +8,7 @@
  * Controller of the aulaVirtualApp
  */
 angular.module('aulaVirtualApp')
-  .controller('LoginCtrl', function ($scope,$location,usuario) {
+  .controller('LoginCtrl', function ($scope,$location,usuario,Session) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -20,12 +20,22 @@ angular.module('aulaVirtualApp')
    		usuario.loginUsuario($scope.usuario)
    		.then(function(respuesta){
    			console.log(respuesta)
-   			$location.path("/home")
+        var user = respuesta.data
+        if (user) {
+          Session.setItem('user',user.data);
+          $location.path("/home")
+        }
+   			
    		},
    		function(error) {
+         $scope.mensaje = "usuario o contraseña incorrecta"
    			console.log(error)
    		});
    		console.log($scope.usuario)
-   	} 
+   	}
+    $scope.logOut = function(){
+      Session.removeItem('user')
+      $location.path("/")
+    }
 
   });

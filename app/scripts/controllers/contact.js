@@ -14,4 +14,5 @@ angular.module('aulaVirtualApp')
       'AngularJS',
       'Karma'
     ];
+    
   });

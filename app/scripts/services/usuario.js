@@ -24,6 +24,13 @@ angular.module('aulaVirtualApp')
                 url: 'http://localhost:3000/login',
                 data: usuario
             });
+        },
+        obtenerClases: function(usuario){
+            return $http({
+                method:'POST',
+                url: 'http://localhost:3000/table',
+                data:usuario
+            });
         }
     }
   });

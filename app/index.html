@@ -15,6 +15,9 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <link rel="stylesheet" type="text/css" href="styles/navbar.css">
+    <link rel="stylesheet" type="text/css" href="styles/profile.css">
     <base href="/">
   </head>
   <body ng-app="aulaVirtualApp">
@@ -23,7 +26,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container">
+    <div class="container-fluid">
     <div ng-view=""></div>
     </div>
 
@@ -64,6 +67,7 @@
         <script src="scripts/controllers/profile.js"></script>
         <script src="scripts/controllers/notification.js"></script>
         <script src="scripts/controllers/contact.js"></script>
+        <script src="scripts/services/session.js"></script>
         <!-- endbuild -->
 </body>
 </html>

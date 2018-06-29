@@ -9,6 +9,9 @@ body {
   padding: 0;
 }
 
+div[id=bg]{
+  background-color: gray;
+}
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,

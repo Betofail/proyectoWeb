@@ -1,6 +1,8 @@
-    <div class="container-fluid ">
+    <div class="container ">
       <h2>Login</h2>
+        <div class="jumbotron">
           <form name="form" role="form">
+            {{mensaje}}
               <div class="form-group">
                   <label for="username">Username</label>
                   <input type="text" name="username" id="username" class="form-control" ng-model="usuario.username" required />
@@ -16,3 +18,4 @@
                   <a href="/signup" class="btn btn-link">Register</a>
               </div>
           </form>
+        </div>

@@ -1,121 +1,32 @@
-   <div>  
-      <div class="container-fluid" id="navbar">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Aula Virtual</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="/home">Inicio</a></li>
-            <li><a href="/profile	">Perfil</a></li>
-            <li><a href="/contact">Contacto</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
- <div class="container-fluid">	
-	<header id="hdatos">Datos alumno - Información general</header>
-    <section id="MidSec">
-      <img src="proyectoWeb\app\images\fotoperfil.jpg" class="foto" alt="No Disponible">
+<div ng-include="'views/navbar.html'"></div>
 
-      <p class="pdatos" ng-model="user"><b>Nombre:</b> {{user.name}}</p>
-      <p class="pdatos"><b>Rut:</b> 18.784.327-8.</p>
+ <div class="container">
+	<header id="hdatos"><h3>Datos alumno - Información general</h3></header>
+    <div class="jumbotron">
+      <img src="images\yeoman.png" class="img-responsive" alt="No Disponible">
+
+      <p class="pdatos" ng-model="user"><b>Nombre:</b> {{user.full_name}}</p>
+      <p class="pdatos"><b>Rut:</b> {{user.RUT}}</p>
       <p class="pdatos"><b>Carrera:</b> Ingeniería en Computación e Informática.</p>
-
-      <aside class="NCH">
-        <ul>		
-          <li><a href="#cursos">Cursos tomados</a></li>
-          <li><a href="#notas">Notas</a></li>
-          <li><a href="#horario">Horario</a></li>
-        </ul>
-      </aside>
-    </section>
+      </div>
   </div>
-   <div class="container">
-   	<a name="cursos"></a>
-      <section id="cur1">
-        <h1>Cursos tomados</h1>
-        <table border="10" class="table-bordered">
-          <th>Codigo</th>
-          <th>Curso</th>
-          <th>Creditos</th>
+
+<div class="container">
+   <h3>Cursos Activos</h3>
+    <div class="table" ng-init="crearTabla()">
+      <table class="table table-bordered">
+        <thead>
           <tr>
-            <td>1</td>
-            <td>Desarrollo Web</td>
-            <td>10</td>
+            <th>NRC</th>
+            <th>Nombre</th>
           </tr>
-        </table>
-      </section>
-   
+        </thead>
+        <tbody>
+        <tr ng-repeat="x in table">
+          <td>{{x.subject.nrc}}</td>
+          <td>{{x.subject.name}}</td>
+        </tr>
+        </tbody>
+      </table>
     </div>
-
-    <div class="container">
-    <a name="notas"></a>
-      <section id="not1">
-        <h1>Notas</h1>
-        <table border="10" class="table-bordered">
-          <th>Curso</th>
-          <th>Nota 1</th>
-          <th>Nota 2</th>
-          <th>Nota 3</th>
-          <th>Taller</th>
-          <th>Examen</th>
-
-          <tr>
-            <td>Desarrollo Web</td>
-            <td>7.0</td>
-            <td>5.4</td>
-            <td>3.9</td>
-            <td>4.6</td>
-            <td>---</td>
-          </tr>
-        </table>
-      </section>
-    
-</div>	
-
-    <div class="container">
-    <a name="horario"></a>
-      <section id="hor1">
-        <h1>Horario</h1>
-        <table border="10" class="table-bordered">
-          <th>Hora</th>
-          <th>Lunes</th>
-          <th>Martes</th>
-          <th>Miercoles</th>
-          <th>Jueves</th>
-          <th>Viernes</th>
-          <th>Sabado</th>
-          <th>Domingo</th>
-
-          <tr>
-            <td>8:30 - 10:20</td>
-            <td></td>
-            <td>Desarrollo Web</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </table>
-      </section>
-
   </div>
